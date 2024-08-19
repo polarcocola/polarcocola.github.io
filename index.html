@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean's Art Show</title>
+    <link rel="stylesheet" href="content_1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <span>Dark Knight</span>
+        </div>
+        <div class="second">
+            <div class="front">
+                <p>A drawing always begin with the brain storm. After day and night, an idea come to my mind...</p>
+            </div>
+             <div class="middle">
+                <p>That is</p> 
+                <span>"Knight"</span>
+             </div>
+            <div class="image_idea">
+                <img src="./src_picture/content_2.png" alt="" class="one">
+                <!-- <img src="./src_picture/content_3.png" alt="" class="two">
+                <img src="./src_picture/content_4.png" alt="" class="three"> -->
+            </div>
+            <div class="text_idea">
+                <hr>
+                <p>I'm the idea of brain storm</p>
+            </div>
+        </div>
+        <div class="third">
+            <p class="title">Drawing Process</p>
+            <img src="./src_picture/content_6.png" alt="" class="img_right">
+            <div class="stage_1">
+                <p class="subtitle">Stage 1</p>
+                <hr>
+                <p class="content">I'm what happend it stage 1,I'm what <br>
+                    happend it stage 1, I'm what happend it stage 1 <br>
+                    I'm what happend it stage 1I'm what happend it stage 1 <br>
+                    I'm what happend it stage 1I'm what happend it stage 1</p>
+                <img src="./src_picture/content_5.png" alt="" class="img">
+            </div>
+            <div class="stage_2">
+                <p class="subtitle">Stage 2</p>
+                <hr>
+                <p class="content">I'm what happend it stage 1,I'm what <br>
+                    happend it stage 1, I'm what happend it stage 1 <br>
+                    I'm what happend it stage 1I'm what happend it stage 1 <br>
+                    I'm what happend it stage 1I'm what happend it stage 1</p>
+                <img src="./src_picture/content_5.png" alt="" class="img">
+            </div>
+            <div class="stage_3">
+                <p class="subtitle">Stage 3</p>
+                <hr>
+                <p class="content">I'm what happend it stage 1,I'm what <br>
+                    happend it stage 1, I'm what happend it stage 1 <br>
+                    I'm what happend it stage 1I'm what happend it stage 1 <br>
+                    I'm what happend it stage 1I'm what happend it stage 1</p>
+                <img src="./src_picture/content_5.png" alt="" class="img">
+            </div>
+            <div class="stage_4">
+                <p class="subtitle">Stage 4</p>
+                <hr>
+                <p class="content">I'm what happend it stage 1,I'm what <br>
+                    happend it stage 1, I'm what happend it stage 1 <br>
+                    I'm what happend it stage 1I'm what happend it stage 1 <br>
+                    I'm what happend it stage 1I'm what happend it stage 1</p>
+                <img src="./src_picture/content_5.png" alt="" class="img">
+            </div>
+        </div>
+        <div class="fourth">
+            <p>Finally...</p>
+        </div>
+    </div>
+    <script>
+        const background = document.querySelector(".first")
+        document.addEventListener('scroll',()=>{
+        const scrollY = window.scrollY
+        if (scrollY !== 0){
+            background.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`
+        }else{
+            background.style.backgroundPosition = ''
+        }
+        })
+        const observer = new IntersectionObserver((entries) =>{
+            entries.forEach((entry)=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add(active)
+                }
+                else{
+                    entry.target.classList.remove(active)
+                }
+            })
+        })
+        const hiddenElement = document.querySelector(".notactive")
+        hiddenElement.forEach((el) => observer.observe(e1))
+    </script>
+</body>
+</html>

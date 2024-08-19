@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container{
+    font: Microsoft JhengHei;
+}
+
+.first{
+    background-image: url(src_picture/font_page_5.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 120vh;
+    font:900 60vh '';
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.first::before{
+    content: '';
+    background-size: cover;
+    background-image: inherit;
+    background-position: 50% 50%;
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -99;
+    overflow: hidden;
+}
+.first span{
+    font-size: 30vh;
+}
+/* 第一幅图的滑动效果和字体 */
+
+.second{    
+    height: 120vh;
+    width: 100vw;
+    display: flex;
+    background-color: black;
+    color:white;
+    font-size: 2.5vh;
+    overflow: hidden;
+}
+.second .front{
+    width: 100vw;
+    left: 20px;
+    position: relative;
+}
+.second .middle{
+    height: 10vh;
+    position: absolute;
+    top:130vh;
+    left: 20px;
+    right: 0;
+    z-index: 1;
+}
+.second .middle span{
+    position: absolute;
+    left: 100px;
+    top:-1vh;
+    font-size: 5vh;
+}
+
+.second .image_idea .one{
+    height: 120vh;
+    width: 60vh;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+}
+.second .image_idea .two{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    overflow: hidden;
+    left: 1vw;
+    top: 190vh;
+}
+.second .image_idea .three{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    overflow: hidden;
+    left: 33.5vw;
+    top: 196.5vh;
+}
+
+.second .text_idea{
+    position: absolute;
+    left: 20px;
+    top: 137vh;;
+}
+/* 第二页 */
+
+.third{  
+        height: 120vh;
+        width: 100vw;
+        display: flex;
+        background-color: black;
+        color:white;
+        font-size: 2vh;
+        overflow: hidden;
+}
+.third .title{
+    position: relative;
+    font-size: 5vh;
+    top: 5vh;
+    left: 20px;
+}
+.third .img_right{
+    position: absolute;
+    width: 60vh;
+    height: 120vh;
+    right: 0;
+}
+.third .stage_1{
+    position: relative;
+    top: 25vh;
+    right: 25vh;
+}
+.third .stage_1 .subtitle{
+    font-size: 3.5vh;
+}
+
+.third .stage_2{
+position: relative;
+top: 25vh;
+right: 20vh;
+}
+
+.third .stage_2 .subtitle{
+font-size: 3.5vh;
+}
+
+
+.third .stage_3{
+    position: relative;
+    top: 70vh;
+    right: 108vh;
+}
+
+.third .stage_3 .subtitle{
+    font-size: 3.5vh;
+}
+
+
+.third .stage_4{
+    position: relative;
+    top: 70vh;
+    right: 103vh;
+}
+.third .stage_4 .subtitle{
+    font-size: 3.5vh;
+}
+/* 第三张 */
+.fourth{    
+    height: 120vh;
+    width: 100vw;
+    display: flex;
+    background-color: black;
+    color:white;
+    font-size: 2.5vh;
+    overflow: hidden;
+}
+
+.fourth p{
+    position: relative;
+    right: 0;
+}
+/* 第四张 */
+.notactive{
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+.ative{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
